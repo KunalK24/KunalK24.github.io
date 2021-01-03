@@ -1,396 +1,398 @@
-html, body { color: white; scroll-behavior: smooth; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; height: 100%; }
-body { background: white; font-size: 15px; line-height: 1.64; }
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,500;0,600;1,400&display=swap");
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, strong, b { margin-bottom: 20px; }
-h1 { font-weight: 650; margin-bottom: 10px;}
-h2 { font-weight: 250; margin-bottom: 30px; }
-h2 { font-size: 45px; text-align: center; }
-h3 { font-weight: 175; font-size: 35px; color: #d37007; }
-h4 { font-weight: 100; font-size: 25px; text-align: left; }
-hr { margin: 40px 0px; border-color: #727878; opacity: 0.2; filter:alpha(opacity=20); }
-a { font-weight: 700; }
-
-p.lead { text-align: center; }
-
-.text-center {
-    text-align: center;
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
 }
 
-.container-fluid {
-    padding: 0px;
+/*--- General CSS --*/
+.section-header {
+  padding: 8vh 20vh 5vh;
 }
 
-#navbar ul, #navbar li, #navbar a {
-    margin: 0px;
-    padding: 0px;
-    text-transform: uppercase;
-    font-size: 17px;
-    border: none;
-    outline: none;
+.section-header hr {
+  width: 80%;
+  margin-bottom: 3vh;
 }
 
-#navbar {
-    font-size: 21px;
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0px auto;
-    z-index: 100;
-    position: fixed;
-    background-color: transparent;
+.section-header h3 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  padding-bottom: 2vh;
 }
 
-#navbar a {
-    display: inline-block;
-    padding: 8px 30px;
-    line-height: 32px;
-    text-align: left;
-    color: #f5f5f5;
-
-    -webkit-transition: color .2s ease-in-out;
-	-moz-transition: color .2s ease-in-out;
-	-o-transition: color .2s ease-in-out;
-	-ms-transition: color .2s ease-in-out;
-	transition: color .2s ease-in-out;
+.section-header h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #02b0c8;
+  left: calc(50% - 50px);
+  margin: 1vh 0;
 }
 
-#navbar a:hover {
-    color: #d37007;
-    text-decoration: none;
+.section-header h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: .75vh;
 }
 
-#header {
-    position: relative;
-    height: 1000px;
-    min-height: 500px;
-    background: url(img/background.jpg) no-repeat top center;
-    background-size: 100% 100% !important;
-    -webkit-background-size: 100% 100% !important;
-    text-align: center;
-    margin: 0px auto;
+.section-header h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-#header:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
+/*--- Navigation --*/
+.navbar {
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background-color: rgb(0, 0, 0, 0.5);
+  transition: background-color 0.5s ease-out;
 }
 
-#header .banner {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0px auto;
-    width: 85%;
-    text-align: center;
+.navbar .solid {
+  background-color: black !important;
+  transition: background-color 0.5s ease-out;
 }
 
-#header .banner-text { width: 100%; }
-#header .banner-text h1 {
-    font-size: 90px;
-    font-family: 'Open Sans', sans-serif !important;
-    color: white;
-    letter-spacing: -2px;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
-    margin: 0px auto 18px auto;
+.navbar-nav {
+  padding-right: .7rem;
 }
 
-#header .banner-text h3 {
-    font-size: 25px;
-    font-family: 'Open Sans', sans-serif !important;
-    color: white;
-    margin: 0px auto;
-    width: 70%;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+.navbar-brand {
+  font-weight: 700;
+  padding-left: 2rem;
 }
 
-#header .social {
-    font-size: 30px;
-    margin: 20px 0px;
-    padding: 0px;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+.nav-item {
+  font-size: 1rem !important;
+  font-weight: 700;
+  padding-right: 1.7rem;
+  color: rgba(255,255,255,.5);
+  transition: color 0.5s ease 0.25s;
 }
 
-#header .social li {
-    display: inline-block;
-    margin: 0px 15px;
-    padding: 0px;
+.nav-item:hover {
+  color: white;
+  transition: color 0.5s ease 0.25s;
 }
 
-#header .social a {
-    color: white;
+/*--- Landing --*/
+.home-inner {
+  background-image: url(img/background.png);
 }
 
-#header .social a:hover {
-    color: #357686;
+.caption {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 38%;
+  z-index: 1;
+  color: white;
 }
 
-#tag {
-    margin: 20px;
-    text-align: center;
-    color: #d37007;
-    font-size: 32px;
-    font-weight: 550;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.caption h1 {
+  font-size: 5.6rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  margin-bottom: .4rem;
+  text-shadow: .3rem .3rem .8rem black;
 }
 
-.container {
-    max-width: 1280px;
-    padding: 40px 180px;
+.caption h3 {
+  font-size: 3rem;
+  letter-spacing: .02rem;
+  text-shadow: .1rem .1rem .5rem black;
 }
 
-.background-black {
-    background: black;
+/*--- About --*/
+#about h3::after {
+  background: #ff9205;
 }
 
-#profile .row > div {
-    margin-bottom: 20px;
+.about-content {
+  background-color: white;
+  padding: 0rem 5rem 7rem 5rem;
 }
 
-#profile .lead {
-    text-align: left;
-    font-weight: 50;
-    font-size: 18px;
+.portrait {
+  width: 50%;
+  height: 100%;
+ }
+
+.about-info {
+  background-color: #e0e6e6;
+  text-align: left;
 }
 
-#profile img {
-    border: 4px #d37007 solid;
+.about-info p {
+  font-size: 1.2rem;
 }
 
-#profile h4 {
-    text-align: left;
-    margin-bottom: 0px;
-    font-size: 23px;
+.info {
+  margin-bottom: 2rem;
 }
 
-#profile h3 {
-    font-size: 32px;
+/*--- Fixed-Bg --*/
+.fixed-bg {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: table;
+  z-index: -1;
 }
 
-#profile .btn {
-    margin: 20px;
-    padding: 8px 16px;
-    background-color: #357686;
-    border: 2px #2a525c solid;
-    display: inline-block;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 20px;
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#profile .btn:hover {
-    background-color: #2f2f2f;
+.fixed-inner {
+  background: url(img/jumbotron.jpg);
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Portfolio --*/
+.portfolio {
+  background-color: #f7f7f7;
 }
 
-.background-black {
-    background: black;
+.projects {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  margin-bottom: 0 !important;
+  padding-bottom: 3vh;
+  overflow: hidden;
 }
 
-.background-gray {
-    background: #ebeeee;
+.project-box {
+  max-width: 30%;
+  margin: 2vh;
+  text-align: center;
+  background: white;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1, 1);
+  transition: transform 0.5s, box-shadow 0.5s ease-out;
 }
 
-#experience {
-    color: black;
+.project-box:hover {
+  transform: scale(0.95, 0.95);
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.25), 0 10px 24px 0 rgba(0, 0, 0, 0.24);
+  transition: transform 0.5s, box-shadow 0.5s ease-out;
 }
 
-#experience h3 {
-    font-weight: 550;
-    margin-top: 0px;
-    margin-bottom: 30px;
+.project-box:hover .project-icon {
+  color: #02b0c8;
+  transition: color 0.4s ease;
 }
 
-#experience h4 {
-    font-size: 25px;
-    margin-bottom: 0px;
+.project-box a {
+  color: black;
 }
 
-#experience hr {
-    margin-bottom: 60px;
+.project-box a:hover {
+  text-decoration: none;
 }
 
-#experience .experience-row {
-    margin-bottom: 40px;
+.project-box a:active {
+  text-decoration: none;
 }
 
-#experience .experience-info {
-    font-size: 16px;
-    margin: 0px;
+.projects h4 {
+  padding: 1.5vh 0 2vh;
+}
+
+.project-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: black;
+  transition: color 0.4s ease;
+}
+
+/*--- Experiences --*/
+#experience h3::after {
+  background: #56e501;
+}
+
+.experience {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  margin-bottom: 0 !important;
+  padding-bottom: 3vh;
+  overflow: hidden;
+}
+
+.experience-container {
+  padding-bottom: 5vh;
+}
+
+.experience-header h3{
+  font-size: 2.5rem;
+  font-weight: 400;
+} 
+
+.experience-info {
+  padding-top: 1vh;
+}
+
+.experience-info h4 {
+  padding-bottom: 0.25vh;
+}
+
+.experience-title {
+  font-size: 1.75rem;
+  text-align: left;
+}
+
+.experience-date {
+  font-size: 1.5rem;
+  float: right;
+}
+
+.experience-gpa {
+  font-size: 1.5rem !important;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.experience-info p {
+  font-size: 1.4rem;
+  padding-top: 0.5vh;
+}
+/*---Media Queries --*/
+@media (max-width: 992px) {
+
+}
+@media (max-width: 768px) {
+  
+}
+@media (max-width: 576px) {
+  
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+margin-left: 0px!important;
+margin-right: 0px!important;
+}
+
+/*--- Fix for Fixed Navbar jumping on scroll --*/
+.fixed-top  {
+ -webkit-backface-visibility: hidden;
+}
+
+/*--- Fixed Landing Page Section --*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+/*--- iOS Fixed Background Image --*/
+.fixed-background {
+  position: relative;
+  width: 100%;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999!important;
+}
+.fixed {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
 }
 
 
-#experience .experience-row p > strong {
-    display: block;
-    padding-top: 8px;
-    margin-bottom: 10px;
-}
 
-#projects .row > div { margin-bottom: 30px; }
-#projects h2 { color: black; }
-#projects hr { margin-bottom: 60px; }
-#projects figure { position: relative; overflow: hidden; }
-#projects figure h3 { color: #FFF; font-weight: 600; margin-bottom: 5px; }
-#projects figure p > strong { width: 60px; display: inline-block; margin: 0px; }
-#projects figure img { width: 110%; height: 110%; }
-#projects figure figcaption {
-    padding: 20px 30px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-}
-#projects figure a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-}
-#projects figure .icon { 
-	background: #22A39F;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	width: 48px;
-	height: 48px;
-}
-#projects figure .icon span {
-	font-size: 18px;
-	line-height: 18px;
-	padding: 15px;
-}
 
-figure.effect {
-	background: #357686;
-    color: #FFF;
-    height: 240px;
-}
 
-figure.effect img {
-	width: -webkit-calc(100% + 20px);
-	width: calc(100% + 20px);
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(-10px,0,0);
-	transform: translate3d(-10px,0,0);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
 
-figure.effect:hover img {
-	opacity: 0.2;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
 
-figure.effect figcaption {
-	text-align: left;
-}
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
 
-figure.effect h3 {
-	position: relative;
-	overflow: hidden;
-	padding-bottom: 20px;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-}
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
 
-figure.effect:hover h3 {
-	opacity: 1;
-}
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
 
-figure.effect h3::after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #fff;
-	content: '';
-	-webkit-transition: -webkit-transform 0.35s;
-	transition: transform 0.35s;
-	-webkit-transform: translate3d(-100%,0,0);
-	transform: translate3d(-100%,0,0);
-}
 
-figure.effect:hover h3::after {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
 
-figure.effect p {
-	padding-top: 10px;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: translate3d(100%,0,0);
-	transform: translate3d(100%,0,0);
-}
 
-figure.effect:hover p {
-	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
 
-#skills h3 {
-    font-weight: 550;
-    margin-top: 40px;
-    margin-bottom: 30px;
-}
 
-#skills .skill {
-    margin-bottom: 20px;
-}
 
-#skills .skill h4 {
-    margin-bottom: 0px;
-}
 
-#skills .progress {
-    border: 3px black solid;
-    background: #ebeeee;
-    color: #357686;
-}
-
-#skills .blue {
-    background: #357686;
-}
-
-.background-dark-gray {
-    background-color: #2f2f2f;
-}
-
-#contact .row {
-    margin-top: 40px;
-}
-
-#contact h3 {
-    font-size: 25px;
-}
-
-#content h4 {
-    font-weight: 50px;
-}
-
-#contact a {
-    text-decoration: none;
-    color: #357686;
-    font-weight: 100; 
-    font-size: 25px; 
-    text-align: left;
-    margin-top: 0px;
-    padding-top: 0px;
-}
-
-.fa {
-    font-size: 45px;
-    margin: 20px;
-    vertical-align: center;
-}
